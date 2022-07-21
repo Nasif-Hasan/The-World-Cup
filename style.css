@@ -7,12 +7,15 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-/* Top part of the website  */
+/*--------------------------- 
+   Top part of the website  
+----------------------------*/
+
 .upper-site{
-    width: 1150px;
-    height: 545px;
-    margin: 50px 70px;
+    width: 90%;
+    margin: 50px auto;
     padding: 15px 25px;
+    padding-bottom: 0;
     border-radius: 20px;
     color: white;
     background-color: black;
@@ -27,14 +30,18 @@ body{
 }
 
 .top-text{
-    padding: 110px 70px;  
+    padding: 110px 70px; 
+    padding-right: 30px; 
+    width: 45%;
 }
 
 .top-text h1{
     font-size: 45px;
 }
 
-/* Top Animated Button */
+/* ----------------------
+    Top Animated Button 
+-------------------------*/
 
 .live{
     background-color: red;
@@ -45,15 +52,16 @@ body{
     font-weight: 500;
     padding: 10px 15px;
     border-radius: 7px;
-    transition: width 3s, height 3s, transform 0.5s ;
+    transition: transform 0.5s ;
 }
 
 .live:hover{
-    transform: rotate(360deg);
+    transform: scale(1.2, 1);
 }
 
 .top-img img{ 
     width: 100%; 
+    height: 100%;
 } 
 
 .but-card{
@@ -61,7 +69,9 @@ body{
     margin: 50px 70px;
 }
 
-/* Button House Section */
+/*------------------------- 
+    Button House Section 
+--------------------------*/
 
 .but-house{
     width: 250px;
@@ -73,7 +83,6 @@ body{
     flex-direction: column; 
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .many-more{
@@ -81,22 +90,23 @@ body{
     font-size: 15px;
     height: 55px;
     width: 80%;
-    border-radius: 5px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
 }
 
 #selected{
     background-color: red;color: white;
 }
 
-/* Cards Section */
+/*----------------- 
+   Cards Section 
+------------------*/
 
 .cards{
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
 }
-
 
 .card{
     width: 312px;
@@ -105,12 +115,36 @@ body{
     border-radius: 10px;
 }
 
-.cars-text{
-    padding: 10px 20px;
+.matchs{
+    width: 312px;
+    height: 360px;
     
 }
 
-/* Card Button */
+.matchs .flag{
+    width: 100%;
+}    
+
+.fra-gar{
+    display: flex;   
+    justify-content: space-evenly;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.mat-text{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.cars-text{
+    padding: 10px 20px;  
+}
+
+/*----------------
+   Card Button 
+----------------*/
 
 .trans-but{
     padding: 4px 15px;
@@ -130,10 +164,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
-/* Footer Section */
+.spec-but button{
+    display: none;
+}
+
+/*-------------------
+   Footer Section 
+--------------------*/
 
 footer{
     width: 100%;
@@ -164,7 +203,9 @@ footer hr{
     padding: 20px 30px;
 }
 
-/* Footer Social Media Icons */
+/*-------------------------------
+   Footer Social Media Icons 
+--------------------------------*/
 
 .social-mid{
     display: flex;
@@ -175,4 +216,189 @@ footer hr{
 .social-mid a{
     color: gray;
     padding: 30px;
+}
+
+/*------------------------
+   Mobile/small Devise 
+-------------------------*/
+
+@media screen and (max-width: 576px){
+    .upper-site{
+        width: 80%;
+        margin: 30px auto;
+        
+    }
+
+    .top-text p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+        height: 3.43em;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .top-post{
+        display: block;
+    }
+
+    .top-text{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .top-text h1{
+        font-size: 40px;
+    }
+    
+    .top-img{
+        width: 100%;
+    }
+
+    .but-house{
+        width: 100%;
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .but-card{
+        display: block;
+    }
+
+    .spec-but{
+        display: none;
+    }
+
+    .but-house{
+        background-color: white;
+        display: flex;
+    }
+
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        grid-row-gap: 20px;
+    }
+
+    footer{
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    footer h1{
+        text-align: center;
+        margin-top: 50px;
+        padding: 30px;
+        padding-top: 40px; 
+    }
+
+    .last-fot{
+        display: block;
+        text-align: center;
+    }
+
+}
+
+/*-------------------------
+   Tablet/medium Devise 
+--------------------------*/
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .upper-site{
+        width: 80%;
+        margin: 30px auto;
+        
+    }
+
+    .top-text p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+        height: 3.43em;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .top-post{
+        display: block;
+    }
+
+    .top-text{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .top-text h1{
+        font-size: 40px;
+    }
+    
+    .top-img{
+        width: 100%;
+    }
+
+    .but-house{
+        width: 100%;
+        display: flex;
+    }
+
+    .but-card{
+        display: block;
+    }
+ 
+    /*-------------------------
+        Only Tablet Button 
+    --------------------------*/
+
+    .spec-but button{ 
+        background-color: red;
+        width: 120px;
+        height: 45px;
+        color: white;
+        font-size: 15px;
+        font-weight: 300;
+        padding: 10px 20px;
+        border-radius: 7px;
+        display: flex;  
+    }
+
+    .spec-but{
+        display: flex;
+        justify-content: center;
+    }
+
+    .but-house{
+        background-color: white;
+        display: flex;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        grid-gap: 20px;
+    }
+
+    footer{
+        margin-bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    footer h1{
+        text-align: center;
+        margin-top: 50px;
+        padding: 30px;
+        padding-top: 40px; 
+    }
+
+    .last-fot{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        padding: 10px;
+    }
+
 }
